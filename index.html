@@ -5,12 +5,63 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Bookmarks App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/float-grid.css" />
 </head>
 <body>
-  <h1>Bookmarks</h1>
-  <script src="api.js"></script>
-  <script src="store.js"></script>
-  <script src="index.js"></script>
+  <header role="banner" >
+    <h1>Bookmarks</h1>
+  </header>
+  <main role="main" class="container">
+    <div role="container" class="add-sort">
+      <button aria-label="Add bookmark">Add Bookmark</button>
+      <select>
+        <option value="1 Star">1 Star</option>
+        <option value="2 Star">2 Star</option>
+        <option value="3 Star">3 Star</option>
+        <option value="4 Star">4 Star</option>
+        <option value="5 Star">5 Star</option>
+      </select>
+    </div>
+    
+    <form id="add-entry" class="container">
+      <input type="text" name="title" class="name-entry" placeholder="Enter Bookmark Name Here">
+      <select name="rating">
+        <option value="1">1 Star</option>
+        <option value="2">2 Star</option>
+        <option value="3">3 Star</option>
+        <option value="4">4 Star</option>
+        <option value="5">5 Star</option>
+      </select>
+      <input type="text" name="url" class="url-entry" placeholder="Enter URL Here">
+      <input type="text" name="desc" class="desc-entry" placeholder="Enter description here">
+      <p class="Error-message">Error</p>
+      <button type="submit">Submit</button>
+    </form>
+
+    <ul class="bookmark-list">
+      <li class="js-bookmark-item container" data-item-id="${item.id}">
+        <span name="${item.name}" class="condensed-name">${id.name} </span>
+        <span name="${item.rating}" class="condensed-rating">`${id.rating} Stars`</span>>
+      </li>
+      
+      <li class="js-bookmark-item container" data-item-id="${item.id}">
+          <span class="list-name">${item.name} </span>
+          <span class="list-rating">`${item.rating} Stars`</span>>
+          <form class="js-edit-item-desc">
+            <input class="bookmark-item" type="text" value="${item.desc}">
+          </form>
+          <a href="${item.url}" class="button">Visit Page</a>
+          <button type="submit" class="list-delete">Remove</button>
+      </li>
+    </ul>
+
+  </main>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="scripts/jQconfig.js"></script>
+  <script src="scripts/api.js"></script>
+  <script src="scripts/store.js"></script>
+  <script src="scripts/booklist.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
