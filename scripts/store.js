@@ -2,25 +2,36 @@
 
 const store = (function(){
 
-  const items = [
-    {
-      id:  '',
-      title: '',
-      url: '',
-      desc: '',
-      rating: 1,
-      opened: false,
-    }
-  ];
+  const addItem = function(item) {
+    item.expanded = false;
+    this.items.push(item);
+  };
+
+  const findById = function(id) {
+    return this.items.find(item => item.id === id);
+  };
+
+  const findAndUpdate = function(id, newData) {
+    const item = this.findById(id);
+    Object.assign(item, newData);
+  };
+
+  const expand = {
+    expanded : false
+  };
 
   const minVal = 0;
 
   const editMode = true;
 
   return {
-    items,
+    items: [],
     minVal,
     editMode,
+    expand,
+    addItem,
+    findById,
+    findAndUpdate,
   };
   
 
