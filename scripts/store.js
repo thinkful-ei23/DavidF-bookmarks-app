@@ -2,6 +2,10 @@
 
 const store = (function(){
 
+  const setError = function(error) {
+    this.error = error;
+  };
+
   const addItem = function(item) {
     item.expanded = false;
     this.items.push(item);
@@ -26,12 +30,14 @@ const store = (function(){
 
   return {
     items: [],
+    error: null,
     minVal,
     editMode,
     expand,
     addItem,
     findById,
     findAndUpdate,
+    setError
   };
   
 

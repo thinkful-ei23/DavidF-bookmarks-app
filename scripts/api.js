@@ -10,13 +10,14 @@ const api = (function() {
     $.getJSON(`${BASE_URL}/bookmarks`, callback);
   };
   
-  const createItem = function(newItem, callback) {
+  const createItem = function(newItem, callback, onError) {
     const query = {
       url: `${BASE_URL}/bookmarks`,
       method: 'POST',
       contentType: 'application/json',
       data: newItem,
-      success: callback    
+      success: callback, 
+      error: onError   
     };
     $.ajax(query);
   };
@@ -26,7 +27,7 @@ const api = (function() {
       url : `${BASE_URL}/bookmarks/${id}`,
       method : 'PATCH',
       contentType : 'application/json',
-      data : JSON.stringify(updateData),
+      data : updateData,
       success : callback
     };
     $.ajax(query);

@@ -1,32 +1,44 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Bookmarks App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="styles/float-grid.css" />
 </head>
 <body>
   <header role="banner" >
-    <h1>Bookmarks</h1>
-  </header>
-  <main role="main" class="container">
-    <div role="container" class="add-filter">
-      <button aria-label="Add bookmark" class="editMode">Add Bookmark</button>
-      <select class="min-set">
-        <option value="1">1 Star</option>
-        <option value="2">2 Star</option>
-        <option value="3">3 Star</option>
-        <option value="4">4 Star</option>
-        <option value="5">5 Star</option>
-      </select>
+    <div class="row">
+      <div class="col-6">
+        <h1>My Bookmarks</h1>
+      </div>
     </div>
-    <div class="placeholder"></div>
-    <ul class="bookmark-list">
-    </ul>
+  </header>
+
+  <main role="main" class="container col-6">
+    <div class="row">
+      <div role="form" class="add-filter">
+        <button aria-label="Add bookmark" class="editMode static-form">Add Bookmark</button>
+        <select aria-label="Select Minimum Rating Displayed" class="min-set static-form">
+          <option value="1">1 Star</option>
+          <option value="2">2 Star</option>
+          <option value="3">3 Star</option>
+          <option value="4">4 Star</option>
+          <option value="5">5 Star</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="placeholder col-6"></div>
+    </div>
+    <div class="row">
+      <ul class="bookmark-list col-6"></ul>
+    </div>
   </main>
+  
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="scripts/jQconfig.js"></script>
   <script src="scripts/api.js"></script>
