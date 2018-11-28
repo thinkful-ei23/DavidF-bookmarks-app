@@ -22,17 +22,6 @@ body {
   flex-wrap: wrap;
 }
 
-a.button {
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  font-family: sans-serif;
-  text-decoration: none;
-  color: initial;
-  padding: 2px;
-  border-radius: 5px;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -40,8 +29,28 @@ main {
   align-items: center;
 }
 
-button {
-  border-radius: 5px;
+button,
+a.btn {
+  background: lightgreen;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  color: #333;
+  border: 1px solid transparent;
+}
+
+a.btn {
+  background: white;
+  text-decoration: none;
+  font-size: 13px;
+  transition: all 0.25s ease-in;
+  border: 1px solid lightgreen;
+}
+
+a.btn:hover {
+  background: lightgreen;
+  border: 1px solid transparent;
+  color: #333;
 }
 
 input {
@@ -76,8 +85,8 @@ input {
   padding: 15px;
 }
 
-ul,
 li {
+  cursor: pointer;
   width: 100%;
   border: 1px solid lightgreen;
   border-radius: 10px;
@@ -104,4 +113,8 @@ li > * {
 .visit-remove-collapse {
   display: flex;
   justify-content: space-around;
+}
+
+.bookmark-desc {
+  padding: 10px;
 }

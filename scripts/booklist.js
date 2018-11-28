@@ -43,7 +43,7 @@ const bookList = (function() {
             <button type="submit" class="update-data">Update</button>
           </form>
           <section class="visit-remove-collapse">
-            <a href="${item.url}" class="button">Visit Page</a>
+            <a href="${item.url}" class="btn">Visit Page</a>
             <button type="submit" class="list-delete">Remove</button>
             <button class="list-collapse">Collapse</button>
           </section>
