@@ -118,3 +118,9 @@ li > * {
 .bookmark-desc {
   padding: 10px;
 }
+
+p {
+  color: white;
+  padding-top: 10px;
+  max-width: 350px;
+}
