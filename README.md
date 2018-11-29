@@ -1,4 +1,4 @@
-# H1 Bookmark App
+# Bookmark App
 
 Live App: https://thinkful-ei23.github.io/DavidF-bookmarks-app/
 
