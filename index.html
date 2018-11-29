@@ -1,49 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Bookmarks App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" media="screen" href="styles/float-grid.css" />
-</head>
-<body>
-  <header role="banner" >
-    <div class="row">
-      <div class="col-6">
-        <h1>My Bookmarks</h1>
-      </div>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <title>Bookmarks App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="styles/main.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+  </head>
 
-  <main role="main" class="container col-6">
-    <div class="row">
-      <div role="form" class="add-filter">
-        <button aria-label="Add bookmark" class="editMode static-form">Add Bookmark</button>
-        <select aria-label="Select Minimum Rating Displayed" class="min-set static-form">
-          <option value="1">1 Star</option>
-          <option value="2">2 Star</option>
-          <option value="3">3 Star</option>
-          <option value="4">4 Star</option>
-          <option value="5">5 Star</option>
-        </select>
+  <body>
+    <header role="banner">
+      <div class="row">
+        <div class="col-6"><h1>My Bookmarks</h1></div>
       </div>
-    </div>
-    <div class="row">
-      <div class="placeholder col-6"></div>
-    </div>
-    <div class="row">
-      <ul class="bookmark-list col-6"></ul>
-    </div>
-  </main>
-  
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="scripts/jQconfig.js"></script>
-  <script src="scripts/api.js"></script>
-  <script src="scripts/store.js"></script>
-  <script src="scripts/booklist.js"></script>
-  <script src="scripts/index.js"></script>
-</body>
+    </header>
+
+    <main role="main" class="container col-6">
+      <p>
+        This site is to create a list of websites that can be rated, described,
+        and accessed by anyone who visits the page. Simply filling in the form
+        at the top will add a website to the list below. Once in the list a
+        bookmark can be clicked on to expand it's view, giving the visitor the
+        option to edit the description and the star rating of a site, as well as
+        the option to remove it entirely and a link to visit the page being
+        bookmarked in the list.
+      </p>
+      <p>
+        This is a simple site mainly to be used to demonstrate RESTful API
+        practices and the use of jQuery. It is not intended for live use.
+      </p>
+      <div class="row">
+        <div role="form" class="add-filter">
+          <button aria-label="Add bookmark" class="editMode static-form">
+            Add Bookmark
+          </button>
+          <select
+            aria-label="Select Minimum Rating Displayed"
+            class="min-set static-form"
+          >
+            <option value="1">1 Star</option>
+            <option value="2">2 Star</option>
+            <option value="3">3 Star</option>
+            <option value="4">4 Star</option>
+            <option value="5">5 Star</option>
+          </select>
+        </div>
+      </div>
+      <div class="row"><div class="placeholder col-6"></div></div>
+      <div class="row"><ul class="bookmark-list col-6"></ul></div>
+    </main>
+
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+    ></script>
+    <script src="scripts/jQconfig.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/store.js"></script>
+    <script src="scripts/booklist.js"></script>
+    <script src="scripts/index.js"></script>
+  </body>
 </html>
